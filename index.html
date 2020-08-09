@@ -1,0 +1,46 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Password Generator</title>
+	</head>
+	<body>
+		<h1>Generate secure and reliable passwords</h1>
+
+		<label>
+			<input type="checkbox" id="strings" />
+			[A-Z], [a-z]
+			<br />
+			Alphabet, Lower & Upper
+		</label>
+		<br /><br />
+		<label>
+			<input type="checkbox" onclick="addSymbols()" />
+			[\W\S]
+			<br />
+			Symbols (!$%^&*()_+|~-=`{}[]:";'<>?,./)
+		</label>
+		<br /><br />
+		<label>
+			<input type="checkbox" onclick="addNumbers()" />
+			[\d]
+			<br />
+			Numbers (0-9)
+		</label>
+		<br /><br />
+
+		<select name="length" id="length">
+			<option value="8">8</option>
+			<option value="12">12</option>
+			<option value="16">16</option>
+			<option value="20">20</option>
+			<option value="24">24</option>
+		</select>
+
+		<input type="text" id="output" />
+		<br /><br />
+		<button onclick="genpw()">Generate</button>
+		<script src="index.js"></script>
+	</body>
+</html>
