@@ -9,6 +9,7 @@ let flagSym = false;
 function addNumbers() {
 	if (flagNUM) {
 		flagNUM = false;
+		document.getElementById("symbols").checked = false;
 		return (charset = strings);
 	} else {
 		flagNUM = true;
@@ -19,6 +20,7 @@ function addNumbers() {
 function addSymbols() {
 	if (flagSym) {
 		flagSym = false;
+		document.getElementById("numbers").checked = false;
 		return (charset = strings);
 	} else {
 		flagSym = true;
