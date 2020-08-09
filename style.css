@@ -1,3 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/*
+color scheme:
+*/
+:root {
+	--dark: #0b0c10;
+	--grey_blue: #1f2833;
+	--grey_light: #c5c6c7;
+	--blue_light: #66fcf1;
+	--blue_dark: #45a29e;
+}
+
+html {
+	background-color: var(--grey_blue);
+	color: white;
+	font-family: "Roboto", sans-serif;
+}
+
+select {
+	background-color: var(--grey_light);
+	color: var(--grey_blue);
+	width: 90px;
+	height: 25px;
+	border-radius: 3px;
+	border-color: white;
+}
+h1 {
+	text-align: center;
+}
+#maincontent {
+	width: 700px;
+	padding-left: 420px;
+	margin: auto;
+	align-items: center;
+}
+#generateButton {
+	width: 90px;
+	height: 25px;
+	background-color: var(--grey_light);
+	color: var(--grey_blue);
+	border-radius: 3px;
+	border-color: white;
+}
 #output {
-	width: 200px;
+	background-color: var(--grey_light);
+	color: var(--grey_blue);
+	border-radius: 3px;
+	border-color: white;
+	width: 220px;
+	height: 25px;
+}
+hr {
+	color: var(--grey_blue);
+	width: 420px;
 }
