@@ -4,8 +4,8 @@
 
 # password-gen
 
-[![made-with-javascript](https://img.shields.io/badge/Made%20with-Javascript-f1e05a?style=flat)](https://developer.mozilla.org/en/JavaScript)
 [![made-with-html](https://img.shields.io/badge/Made%20with-Html-e34c26?style=flat)](https://developer.mozilla.org/en/html)
+[![made-with-javascript](https://img.shields.io/badge/Made%20with-Javascript-f1e05a?style=flat)](https://developer.mozilla.org/en/JavaScript)
 [![made-with-css](https://img.shields.io/badge/Made%20with-Css-563d7c?style=flat)](https://developer.mozilla.org/en/css)
 
 
