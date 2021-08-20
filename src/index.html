@@ -9,42 +9,39 @@
 		<h1>Generate secure and reliable passwords</h1>
 		<hr />
 		<div id="maincontent">
-			<br /><br />
-			<label>
-				<input type="checkbox" id="strings" />
-				[A-Z], [a-z]
-				<br />
-				Alphabet, Lower & Upper
-			</label>
-			<br /><br />
-			<label>
-				<input type="checkbox" id="symbols" onclick="addSymbols()" />
-				[\W\S]
-				<br />
-				Symbols (!$%^&*()_+|~-=`{}[]:";'<>?,./)
-			</label>
-			<br /><br />
-			<label>
-				<input type="checkbox" id="numbers" onclick="addNumbers()" />
-				[\d]
-				<br />
-				Numbers (0-9)
-			</label>
-			<br /><br />
+			<div class="label_container">
+				<label>
+					<input type="checkbox" id="strings" checked disabled />
+					Alphabet, Lower & Upper
+				</label>
+				<label>
+					<input type="checkbox" checked disabled />
+					Numbers
+					<code> (0-9) </code>
+				</label>
+				<label>
+					<input type="checkbox" class="symbols" checked onclick="addSymbols()" />
+					Symbols
+					<code> (!$%^&*()_+|~-=`{}[]:";'<>?,./) </code>
+				</label>
+			</div>
+			<div class="select_container">
+				<div>
+					<select name="length" id="length" aria-valuenow="16">
+						<option value="8">8</option>
+						<option value="12">12</option>
+						<option value="16">16</option>
+						<option value="20">20</option>
+						<option value="24">24</option>
+					</select>
 
-			<select name="length" id="length">
-				<option value="8">8</option>
-				<option value="12">12</option>
-				<option value="16">16</option>
-				<option value="20">20</option>
-				<option value="24">24</option>
-			</select>
-
-			<input type="text" id="output" readonly="true" />
-			<br /><br />
-			<button id="generateButton" onclick="genpw()">Generate</button>
+					<input type="text" id="output" readonly="true" />
+				</div>
+				<div>
+					<button class="generateButton" onclick="genpw()">Generate</button>
+				</div>
+			</div>
 		</div>
-		<br /><br />
 		<hr />
 		<script src="index.js"></script>
 	</body>

@@ -1,27 +1,13 @@
 document.getElementById("strings").disabled = true;
-let strings = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let numbers = "0123456789";
+let strings = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 let symbols = "!@#$%^&*()_+~|}{[]:;?><,./-=";
 let charset = strings;
-let flagNUM = false;
 let flagSym = false;
-
-function addNumbers() {
-	if (flagNUM) {
-		flagNUM = false;
-		document.getElementById("symbols").checked = false;
-		return (charset = strings);
-	} else {
-		flagNUM = true;
-		return (charset += numbers);
-	}
-}
 
 function addSymbols() {
 	if (flagSym) {
 		flagSym = false;
-		document.getElementById("numbers").checked = false;
-		return (charset = strings);
+		charset = charset.replace(symbols, "");
 	} else {
 		flagSym = true;
 		return (charset += symbols);
@@ -29,6 +15,7 @@ function addSymbols() {
 }
 
 function genpw() {
+	console.log(charset);
 	let length = document.getElementById("length").value;
 	let retVal = "";
 	for (var i = 0, n = charset.length; i < length; ++i) {
@@ -36,3 +23,8 @@ function genpw() {
 	}
 	return (document.getElementById("output").value = retVal);
 }
+
+window.onload = () => {
+	addSymbols();
+	genpw();
+};

@@ -1,55 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /*
 color scheme:
 */
 :root {
-	--dark: #0b0c10;
-	--grey_blue: #1f2833;
-	--grey_light: #c5c6c7;
-	--blue_light: #66fcf1;
-	--blue_dark: #45a29e;
+	--dark: #2e3440;
+	--dark_hover: #2e344090;
+	--grey_blue: #3b4252;
+	--grey_light: #d8dee9;
 }
 
 html {
 	background-color: var(--grey_blue);
 	color: white;
 	font-family: "Roboto", sans-serif;
+	font-weight: 400;
 }
 
 select {
-	background-color: var(--grey_light);
-	color: var(--grey_blue);
+	background-color: var(--dark);
+	color: var(--grey_light);
 	width: 90px;
 	height: 25px;
+	border: none;
 	border-radius: 3px;
-	border-color: white;
 }
 h1 {
 	text-align: center;
 }
 #maincontent {
-	width: 700px;
-	padding-left: 420px;
-	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
 	align-items: center;
 }
-#generateButton {
-	width: 90px;
-	height: 25px;
-	background-color: var(--grey_light);
-	color: var(--grey_blue);
+.generateButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	width: 5rem;
+	height: 2rem;
+	background-color: var(--dark);
+	color: var(--grey_light);
 	border-radius: 3px;
-	border-color: white;
+	border: none;
+	margin: 1rem;
+}
+.select_container {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: column;
+	padding: 1rem;
+	margin: 1rem;
 }
 #output {
-	background-color: var(--grey_light);
-	color: var(--grey_blue);
+	background-color: var(--dark);
+	color: var(--grey_light);
 	border-radius: 3px;
-	border-color: white;
+	border: 1px solid #ffffff00;
 	width: 220px;
 	height: 25px;
+	padding: 0.5rem;
 }
+#output:focus {
+	background-color: var(--dark_hover);
+	border: 1px solid var(--grey_light);
+	outline: none;
+}
+
 hr {
-	color: var(--grey_blue);
+	color: var(--grey_light);
 	width: 420px;
+}
+code {
+	padding: 0.25rem;
+	background-color: var(--dark);
+}
+.label_container {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	flex-direction: column;
+}
+label {
+	margin: 0.3rem;
 }
